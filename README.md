@@ -1,1 +1,5 @@
-# vencord-plugin
+# Richer Cider Vencord Plugin
+
+## Building
+
+TODO
