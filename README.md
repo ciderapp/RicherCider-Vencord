@@ -1,4 +1,4 @@
-# RicherCider -- Vencord Plugin
+# RicherCider ― Vencord Plugin
 
 RicherCider is a simple plugin to allow [Cider](https://cider.sh) to use the Discord presence type "Listening to" and various other features.
 
