@@ -28,9 +28,9 @@ In this folder, **copy** the file named **richerCider.desktop.tsx**.
 
 To install your customised version of Vencord, run the following three commands:
 
-`pnpm install`
-`pnpm build`
-`pnpm inject`
+`pnpm install`<br>
+`pnpm build`<br>
+`pnpm inject`<br>
 
 Next, use the launched Vencord installer to inject your Discord installation.
 
