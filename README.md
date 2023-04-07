@@ -3,20 +3,20 @@
 RicherCider is a simple plugin to allow [Cider](https://cider.sh) to use the Discord presence type "Listening to" and various other features.
 
 
-# Building
+## Building
 > Requires: Git, NodeJS, PNPM
 
 Due to custom plugin importing not being availale natively in Vencord, to use RicherCider you must build Vencord from source including the RicherCider plugin.
 
 
 
-## Downloading Vencord Source
+### Downloading Vencord Source
 
 To begin, **clone** the Vencord repository to your local disk using the following command:
 
 `git clone https://github.com/Vendicated/Vencord.git`
 
-## Adding RicherCider
+### Adding RicherCider
 
 Once you have successfully cloned the Vencord repository, navigate to the following folder:
 
@@ -24,7 +24,7 @@ Once you have successfully cloned the Vencord repository, navigate to the follow
 
 In this folder, **copy** the file named **richerCider.desktop.tsx**.
 
-## Installing
+### Installing
 
 To install your customised version of Vencord, run the following three commands:
 
@@ -34,6 +34,6 @@ To install your customised version of Vencord, run the following three commands:
 
 Next, use the launched Vencord installer to inject your Discord installation.
 
-## Enabling
+### Enabling
 
 Once Vencord has been injected, you will be able to find richerCider in Discord's settings.
