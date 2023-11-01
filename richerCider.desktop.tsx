@@ -41,10 +41,10 @@ export default definePlugin({
             }
         },
         {
-            find: "renderTimeBar=function",
+            find: "}renderTimeBar(",
             replacement: {
-                match: /renderTimeBar=function\((.{1,3})\){.{0,50}?var/,
-                replace: "renderTimeBar=function($1){var"
+                match: /renderTimeBar\((.{1,3})\){.{0,50}?let/,
+                replace: "renderTimeBar($1){let"
             }
         }
     ],
