@@ -67,7 +67,7 @@ export default definePlugin({
         </>
     ),
     patchActivity(activity: any) {
-        if (appIds.includes(activity.application_id)) {
+        if (appIds.includes(activity?.application_id)) {
             activity.type = 2; /* LISTENING type */
         }
     },
