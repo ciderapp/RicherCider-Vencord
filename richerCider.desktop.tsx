@@ -17,6 +17,7 @@
 */
 
 import { Link } from "@components/Link";
+import { Logger } from "@utils/Logger";
 import definePlugin from "@utils/types";
 import { Forms } from "@webpack/common";
 const appIds = [
@@ -25,16 +26,25 @@ const appIds = [
     "1020414178047041627",
     "1032800329332445255"
 ];
+const logger = new Logger("richerCider");
 export default definePlugin({
     name: "richerCider",
     description: "Enhances Cider (More details in info button) by adding the \"Listening to\" type prefix to the user's rich presence when an applicable ID is found.",
     authors: [{
         id: 191621342473224192n,
         name: "cryptofyre",
-    }],
+    },
+    {
+        id: 546426958465073163n,
+        name: "Core",
+    }
+    ],
+    start() {
+        logger.debug("Plugin started");
+    },
     patches: [
         {
-            find: '.displayName="LocalActivityStore"',
+            find: '="LocalActivityStore",',
             replacement: {
                 match: /LOCAL_ACTIVITY_UPDATE:function\((\i)\)\{/,
                 replace: "$&$self.patchActivity($1.activity);",
@@ -50,14 +60,14 @@ export default definePlugin({
     ],
     settingsAboutComponent: () => (
         <>
-            <Forms.FormTitle tag="h3">Install Cider to use this Plugin</Forms.FormTitle>
+            <Forms.FormTitle tag="h3">Requirements</Forms.FormTitle>
             <Forms.FormText>
-                <Link href="https://cider.sh">Follow the link to our website</Link> to get Cider up and running, and then enable the plugin.
+                You will need <Link href="https://cider.sh">Cider</Link> (any version) to use this plugin.
             </Forms.FormText>
             <br></br>
             <Forms.FormTitle tag="h3">What is Cider?</Forms.FormTitle>
             <Forms.FormText>
-                Cider is an open-source and community oriented Apple Music client for Windows, macOS, and Linux.
+                Cider is a cross-platform Apple Music experience built on Vue.js and written from the ground up with performance in mind.
             </Forms.FormText>
             <br></br>
             <Forms.FormTitle tag="h3">Recommended Optional Plugins</Forms.FormTitle>
@@ -66,8 +76,9 @@ export default definePlugin({
             </Forms.FormText>
         </>
     ),
-    patchActivity(activity: any) {
+    patchActivity(activity: { application_id: string; type: number; }) {
         if (appIds.includes(activity?.application_id)) {
+            logger.debug("Found a matching application ID, correcting activity type");
             activity.type = 2; /* LISTENING type */
         }
     },
