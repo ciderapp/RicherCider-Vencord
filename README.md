@@ -4,7 +4,7 @@ A plugin that provides a simple header rewrite to allow Cider to show as the lis
 Created by cryptofyre
 
 ## Installation Guide (Automated, Windows Only)
-Run in Powershell (Non Admin)
+### Run in Powershell (Non Admin)
 `Invoke-Expression (Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/ciderapp/RicherCider-Vencord/main/Install-RicherCider.ps1' -UseBasicParsing).Content`
 
 ## Installation Guide (Manual)
