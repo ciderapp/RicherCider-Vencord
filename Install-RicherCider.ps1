@@ -33,3 +33,4 @@ pnpm run inject
 
 # Prompt installer should have completed successfully assuming you followed the instructions.
 Write-Output "If you followed the instructions correctly, the installer should have completed successfully."
+Write-Output "You'll need to make sure to enable the plugin (richerCider) in the Vencord settings inside of Discord > Settings > Plugins > richerCider and turn the switch on and click restart."
