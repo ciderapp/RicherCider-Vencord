@@ -3,7 +3,11 @@ A plugin that provides a simple header rewrite to allow Cider to show as the lis
 
 Created by cryptofyre
 
-## Installation Guide
+## Installation Guide (Automated, Windows Only)
+Run in Powershell (Non Admin)
+`Invoke-Expression (Invoke-WebRequest -Uri 'URL' -UseBasicParsing).Content`
+
+## Installation Guide (Manual)
 
 #### You'll need the following dependencies
 - Git ([https://git-scm.com](https://git-scm.com/download))
