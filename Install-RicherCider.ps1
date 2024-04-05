@@ -25,6 +25,7 @@ Stop-Process -Name DiscordPTB -Force -ErrorAction SilentlyContinue
 # Run the installer for Vencord
 Set-Location Vencord\
 pnpm install
+pnpm run build
 
 # Prompt user to select "Install Vencord" option
 Write-Output "Please select the 'Install Vencord' option in the installer."
