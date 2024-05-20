@@ -7,7 +7,7 @@ winget install -e --id OpenJS.NodeJS
 winget install -e --id Git.Git
 
 # Install pnpm using npm
-npm install -g pnpm@8.10.2
+npm install -g pnpm@9.1.0
 
 # Clone the Vencord repository
 git clone https://github.com/Vendicated/Vencord.git
