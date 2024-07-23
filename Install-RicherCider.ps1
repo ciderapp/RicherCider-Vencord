@@ -6,8 +6,8 @@ Set-Location -Path $homeDirectory
 winget install -e --id OpenJS.NodeJS
 winget install -e --id Git.Git
 
-# Install pnpm using npm
-npm install -g pnpm@9.1.0
+# Enable corepack
+corepack enable
 
 # Clone the Vencord repository
 git clone https://github.com/Vendicated/Vencord.git
@@ -24,6 +24,10 @@ Stop-Process -Name DiscordPTB -Force -ErrorAction SilentlyContinue
 
 # Run the installer for Vencord
 Set-Location Vencord\
+
+# Installing the local version of pnpm
+corepack install
+
 pnpm install
 pnpm run build
 
