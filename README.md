@@ -1,3 +1,5 @@
+# ⚠️ NO LONGER MAINTAINED, THIS FEATURE IS NOW AVAILABLE BY DEFAULT IN DISCORD AND UTILIZED IN CIDER 2.5+ ⚠️
+---
 # richerCider Plugin for Vencord
 A plugin that provides a simple header rewrite to allow Cider to show as the listening activity type.
 
